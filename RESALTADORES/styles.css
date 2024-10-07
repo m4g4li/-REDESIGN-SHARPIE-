@@ -42,7 +42,7 @@ section{
     background-image: url(img/bg.png);
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 640px;/* altura mínima que sera aplicada a cada sección*/
+    min-height: 720px;/* altura mínima que sera aplicada a cada sección*/
 }
 
 .inicio video{
@@ -157,7 +157,7 @@ header .toggle.active{
 .container .content{
     position: relative;
     z-index: 100;
-    padding-top: 500px;
+    padding-top: 560px;
 }
 
 .container .content a{
@@ -1024,7 +1024,7 @@ footer h6{
     }
 
     .container .content a{
-        margin-top: 500px;
+        margin-top: 600px;
     }
 
 
@@ -1228,7 +1228,7 @@ footer h6{
    
     .redes{
         padding-top: 350px;
-        margin-right: 0px;
+        margin-right: 50px;
         gap: 5px;
     }
 
