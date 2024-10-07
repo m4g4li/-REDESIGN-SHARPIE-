@@ -1,0 +1,731 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+    color: #F272B8 ;
+    color: #0511F2;
+    color: #F2E205;
+    color: #F20505;
+    color: #F2F2F2;
+    color: #0D0D0D;
+}
+
+body{
+    color: #0D0D0D;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(img/bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contenedor{
+    margin: auto;
+    width: 90%;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: row;/*Los elementos se ponen al lado menu main y aside*/
+    flex-wrap: wrap;/*Los elementos que no caben se pongan abajo*/
+}
+
+section{
+    position: relative;
+    width: 100%;
+    padding: 0 100px;
+    display: flex;
+}
+
+
+
+
+.inicio{
+    min-height: 720px;/* altura mínima que sera aplicada a cada sección*/
+    
+}
+
+.inicio .portada{
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+} 
+
+.inicio.active::before{
+    content: '';
+    box-shadow: 0 0 0 1300px transparent; /* Color fondo de menu */
+}
+
+.inicio.active .menu{
+    opacity: (1);
+    visibility: visible;/*Sea visible el menu*/
+    transition-delay: 0.1s;
+}
+
+
+.popover {
+    visibility: hidden;
+    width: 160px;
+    background-color: #F272B8;
+    text-align: center;
+    border-radius: 5px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 40%; /* Posiciona el popover encima de la imagen */
+    left: 50%;
+    margin-left: -80px; /* Ajusta la posición horizontal */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.popover2 {
+    visibility: hidden;
+    width: 160px;
+    background-color: #0D0D0D;
+    color: #F2F2F2;
+    text-align: center;
+    border-radius: 5px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 60%; /* Posiciona el popover encima de la imagen */
+    bottom: 30%;
+    left: 65%;
+    margin-left: -80px; /* Ajusta la posición horizontal */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.popover3 {
+    visibility: hidden;
+    width: 160px;
+    background-color: #F20505;
+    text-align: center;
+    border-radius: 5px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 20%;
+    margin-left: -80px; /* Ajusta la posición horizontal */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.popover a, .popover2 a, .popover3 a {
+    font-family:"Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #F2F2F2;
+}
+
+.inicio:hover .popover, .inicio:hover .popover2, .inicio:hover .popover3 {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+}
+
+/* icono de menu hamburguesa*/
+header .toggle{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-image: url(img/nav.gif);/* decidi hacer un gif que cambia de negro a rojo porque al pasar en algunas secciones no se podia visualizar al ir navegando por la página*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    cursor: pointer;
+}
+
+/* icono de menu x*/
+header .toggle.active{
+    background-image: url(img/closed.gif);/* decidi hacer un gif que cambia de negro a rojo porque al pasar en algunas secciones no se podia visualizar al ir navegando por la página*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px;
+}
+
+
+
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-direction: column;
+    z-index: 10;
+    padding-left: 500px;
+    opacity: (0);
+    background: url(img/bg.png);/*fondo al menu*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #F2F2F2;
+    visibility:hidden; /*Asi es como logramos que el menu no sea visible hasta presionar menu hamburguesa*/
+}
+
+.menu li a{ /*estilos a los enlaces del menu*/
+    color: #F20505;
+    font-family:"Montserrat", sans-serif;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 40px;
+    padding: 5px 10px;
+    margin:  5px 0;
+    display: inline-block;
+    transition: 0.1s;/*tiempo paara que desaparezca el menu deplegado*/
+}
+
+.menu li:hover a{
+    letter-spacing: 5px; /*efecto sobre los enlace que se vea con separación cada letra*/
+    color: #F2F2F2;
+}
+
+
+
+.banner1{/*BANNER*/
+    /*min-height: 210px;
+    margin-top: 80px;
+    margin-bottom: 80px;*/
+    min-height: 300px;/* altura mínima que sera aplicada a cada sección*/
+    background-image: url(img/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.seccion1{/*sección creada solo para visualizar como se ve una imagen de fondo*/
+    min-height: 650px;/* altura mínima que sera aplicada a cada sección*/
+}
+
+.container1 {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
+}
+
+.box1 {
+    flex: 1; /* Hace que ambas cajas ocupen el mismo ancho */
+    width: 50%;
+    padding: 20px;
+}
+
+/*.one, .two{
+    background-color: #F20505;
+}*/
+
+video{
+    margin-top: 25%;
+    width: 100%;
+}
+
+
+
+
+
+.seccion2{/*sección creada solo para visualizar como se ve una imagen de fondo*/
+    min-height: 350px;/* altura mínima que sera aplicada a cada sección*/
+    margin-top: -120px;
+}
+
+.container2 {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
+}
+
+.box2 {
+    flex: 1; /* Hace que ambas cajas ocupen el mismo ancho */
+    width: 25%;
+    padding: 20px;
+}
+
+/* .three, .four, .five, .six{
+    background-color: #F20505;
+}*/
+
+
+.banner2{/*BANNER*/
+    min-height: 300px;/* altura mínima que sera aplicada a cada sección*/
+    background-image: url(img/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+.seccion3{/*sección donde se encuentra la diapositiva infinita*/
+    min-height: 650px;/* altura mínima que sera aplicada a cada sección*/
+}
+
+.container3 {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
+    margin-top: 30px;
+}
+
+.box3 {
+    flex: 1; /* Hace que ambas cajas ocupen el mismo ancho */
+    width: 50%;
+    padding: 20px;
+}
+
+
+
+
+.seccion4{/*sección donde se encuentra la diapositiva infinita*/
+    min-height: 650px;/* altura mínima que sera aplicada a cada sección*/
+}
+
+.container4 {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
+}
+
+.box3 {
+    flex: 1; /* Hace que ambas cajas ocupen el mismo ancho */
+    width: 50%;
+    padding: 20px;
+}
+
+
+
+
+
+/*.seccion5{sección donde se encuentra la diapositiva infinita
+    min-height: 650px; altura mínima que sera aplicada a cada sección
+    background-color: #F20505;
+}
+
+.container5{
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.slider{
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+  
+.slider ul{
+  display: flex;
+  padding: 0;
+  width: 300%;
+  animation: cambio 20s infinite;
+  animation-timing-function: ease;
+}
+  
+.slider li{
+  list-style: none;
+}
+  
+.slider img{
+  width: 100%;
+}
+  
+@keyframes cambio{
+  0%{ margin-left: 0;}
+  30%{ margin-left: 0;}
+  
+  35%{ margin-left: -100%;}
+  65%{ margin-left: -100%;}
+  
+  70%{ margin-left: -200%;}
+  100%{ margin-left: -200%;}
+}*/
+
+
+
+.seccionb{/*BANNER*/
+    min-height: 300px;/* altura mínima que sera aplicada a cada sección*/
+    background-image: url(img/sharpie-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+/*sección de redes sociales de la marca*/
+.contacto{/*sección de redes sociales de la marca*/
+    min-height: 400px;/* altura mínima que sera aplicada a cada sección*/
+    position: relative;
+    width: 100%;
+    height: 0;
+    
+}
+
+.newsletter{
+    background-image: url(img/post-it1.png);/*imagen como fondo*/
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    margin-top: 0px ;
+    text-align: center;
+    background-repeat: no-repeat;/*para que no se repita la imagen de fondo*/
+}
+
+.newsletter h2{
+    font-family:"Montserrat", sans-serif;
+    color: #0511F2;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    margin-top: 110px;
+    margin-left: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column; /*aparezca primero la casilla de email y luego el botón*/
+    margin-left: 50px;
+    padding-top: 10px; 
+    position: relative;
+    z-index: 9;/*controla que elemento se mostrara o actuara antes*/
+}
+
+input[type="email"] { /*estilos que se le agregan al ingresar la dirección de correo*/
+    padding: 10px;
+    border: 1px solid #F2F2F2;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-family:"Montserrat", sans-serif;
+    font-size: 16px;
+    max-width: 250px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0D0D0D;
+    font-family:"Montserrat", sans-serif;
+    color: #F2F2F2;
+    font-size: 16px;
+    cursor: pointer;
+    max-width: 250px;
+}
+
+button:hover {
+    background-color: #F20505;
+}
+
+.hidden {
+    display: none;
+}
+
+#message { /*estilos agregados al mensaje que aparecera luego de ingresar el correo */
+    font-family:"Montserrat", sans-serif;
+    margin-top: 80px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+.redes{
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    gap: 70px;
+    display: flex;
+    transition: 0.5s;
+    z-index: 9;/*controla que elemento se mostrara o actuara antes*/
+}
+
+.redes li{
+    width: 50px;
+    height: 50px;
+}
+
+.redes li a{
+    display: inline-block;
+    width: 250%;
+    height: 250%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.redes li:hover a{
+    background: #F2E205; 
+}
+
+
+/*.redes li a img{
+    
+
+}*/
+
+
+.redes li a img{
+    transform: scale(0.6);
+}
+
+
+
+
+footer {
+    min-height: 220px;/* altura mínima que sera aplicada a cada sección*/
+    background-image: url(img/contact.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-top: 50px;
+    
+   
+}
+
+footer a img{
+    width: 100px;
+    justify-content: center;
+}
+
+
+footer h6{
+    display: flex;
+    font-family:"Montserrat", sans-serif;
+    color: #0D0D0D;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*agregarle reponsividad a la página*/
+
+@media(max-width:991px){
+    
+    section{
+        padding: 40px;
+    }
+
+    header{
+        padding: 20px 40px;
+    }
+
+    .menu{
+        padding: 0;
+        align-items: center;
+    }
+
+    .menu li a{
+        font-size: 30px;
+    }
+
+    .inicio{
+        min-height: 710px;/* altura mínima que sera aplicada a cada sección*/
+        
+    }
+
+    .inicio .portada{
+        height: 100%;
+    }
+
+    .banner1{/*BANNER*/
+        min-height: 210px;/* altura mínima que sera aplicada a cada sección*/
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+
+    .seccion1{
+        min-height: 370px;
+    }
+
+    .box1 {
+        flex-basis: 100%; /* Cada caja ocupará el 100% del ancho, moviéndose una debajo de la otra */
+    }
+
+    video{
+        margin-top: 0%;
+        width: 100%;
+    }
+
+    
+    .seccion2{
+        min-height: 370px;
+        margin-top: -70px;
+    }
+
+    .box2 {
+        flex-basis: 100%; /* Cada caja ocupará el 100% del ancho, moviéndose una debajo de la otra */
+    }
+
+    .banner2{/*BANNER*/
+        min-height: 300px;/* altura mínima que sera aplicada a cada sección*/
+
+    }
+
+    .seccion3{
+        min-height: 370px;
+        margin-top: -20px;
+    }
+
+    .box3 {
+        flex-basis: 100%; /* Cada caja ocupará el 100% del ancho, moviéndose una debajo de la otra */
+    }
+
+    .seccion4{
+        min-height: 370px;
+        margin-top: -80px;
+    }
+
+    .box4 {
+        flex-basis: 100%; /* Cada caja ocupará el 100% del ancho, moviéndose una debajo de la otra */
+    }
+
+    .contacto{
+        min-height: 520px;
+    }
+
+    .newsletter h2{
+        width: 300px;
+        color: #0511F2;
+        font-weight: 600;
+        font-size: 15px;
+        text-align: right;
+    }
+
+    form{
+        z-index: 9;
+    }
+
+    #message {
+        margin-top: 20px;
+    }
+   
+    .redes{
+        padding-top: 350px;
+        margin-right: 40px;
+        gap: 5px;
+    }
+
+    .redes li a img{
+        width: 50px;
+    }
+
+    .redes li a{
+        width: 100%;
+        height: 100%;
+    }
+
+    footer {
+        background-image: url(img/contact2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-left: 40px;
+    }
+
+    footer h6{
+        font-weight: 600;
+        margin-right: 40px;
+    }
+
+
+
+}
+
