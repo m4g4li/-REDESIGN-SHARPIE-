@@ -214,6 +214,7 @@ header .toggle.active{
     padding: 10px 20px;
     text-transform: uppercase;
     transition: 0.5s;
+    border-radius: 5px;
 }
 
 .container .content a:hover{
