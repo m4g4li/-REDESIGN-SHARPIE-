@@ -315,7 +315,9 @@ video{
     padding: 20px;
 }
 
-
+.box3 img{
+    width: 500px;
+}
 
 
 
@@ -667,6 +669,10 @@ footer h6{
 
     .box3 {
         flex-basis: 100%; /* Cada caja ocupará el 100% del ancho, moviéndose una debajo de la otra */
+    }
+
+    .box3 img{
+        width: 400px;
     }
 
     .seccion4{
