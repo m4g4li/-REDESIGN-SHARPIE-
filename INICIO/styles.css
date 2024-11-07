@@ -263,7 +263,7 @@ video{
 .box2 {
     flex: 1; /* Hace que ambas cajas ocupen el mismo ancho */
     width: 25%;
-    padding: 5px;
+    padding: 20px;
 }
 
 /* .three, .four, .five, .six{
