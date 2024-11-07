@@ -411,6 +411,19 @@ header .toggle.active{
     color: #0D0D0D;
 }
 
+.nav-tabs .nav-link {
+    color: #0D0D0D;
+    border: none;
+    background-color: #F2F2F2;
+    font-family:"Montserrat", sans-serif;
+}
+
+.nav-tabs .nav-link.active {
+    color: #F2F2F2;
+    background-color: #F20505;
+    border-radius: 5px;
+}
+
 
 table{
     color: #0D0D0D;
