@@ -19,8 +19,9 @@ document.getElementById('form').addEventListener('submit', function(event) {
         commentInput.value.trim() !== ''
     ) {
         messages.textContent = '¡Gracias, pronto alguien del equipo de soporte se pondrá en contacto contigo!';
-        messages.classList.remove('hidden');
+        messages.style.display = 'block';
         messages.style.color = '#0D0D0D'; // Color del mensaje
+
         // Limpiar los campos
         nameInput.value = '';
         emailInput.value = '';
@@ -30,8 +31,8 @@ document.getElementById('form').addEventListener('submit', function(event) {
         commentInput.value = '';
     } else {
         messages.textContent = 'Por favor, complete todos los campos correctamente.';
-        messages.classList.remove('hidden');
-        messages.style.color = '#F2F2F2';
+        messages.style.display = 'block';
+        messages.style.color = '#F2F2F2'; // Color del mensaje de advertencia en rojo
     }
 });
 
