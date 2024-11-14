@@ -31,7 +31,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
     } else {
         messages.textContent = 'Por favor, complete todos los campos correctamente.';
         messages.classList.remove('hidden');
-        messages.style.color = '#F2F2F2'; // Color del mensaje
+        messages.style.color = '#F22'; // Color del mensaje de advertencia en rojo
     }
 });
 
