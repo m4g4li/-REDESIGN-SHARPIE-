@@ -13,7 +13,7 @@ document.getElementById('newsletter-form').addEventListener('submit', function(e
     } else {
         message.textContent = 'Por favor, ingresa un correo electrónico válido.';
         message.style.display = 'block';
-        message.style.color = '#F22'; // Color del mensaje en rojo
+        message.style.color = '#F20505'; // Color del mensaje en rojo
     }
 });
 
