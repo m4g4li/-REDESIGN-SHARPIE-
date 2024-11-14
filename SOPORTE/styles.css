@@ -301,6 +301,14 @@ label {
     border-color: transparent;
 }
 
+#messages { /*estilos agregados al mensaje que aparecera luego de ingresar el correo */
+    font-family:"Montserrat", sans-serif;
+    margin-top: 20px;
+    font-size: 16px;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
 
 .seccion2 {
     min-height: 150px; /* Altura mínima de la sección */
