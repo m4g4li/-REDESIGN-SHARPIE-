@@ -20,7 +20,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
     ) {
         messages.textContent = '¡Gracias, pronto alguien del equipo de soporte se pondrá en contacto contigo!';
         messages.classList.remove('hidden');
-        messages.style.color = '#0511F2'; // Color del mensaje
+        messages.style.color = '#0D0D0D'; // Color del mensaje
         // Limpiar los campos
         nameInput.value = '';
         emailInput.value = '';
@@ -31,7 +31,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
     } else {
         messages.textContent = 'Por favor, complete todos los campos correctamente.';
         messages.classList.remove('hidden');
-        messages.style.color = '#F22'; // Color del mensaje de advertencia en rojo
+        messages.style.color = '#F2F2F2';
     }
 });
 
