@@ -1,19 +1,19 @@
 document.getElementById('newsletter-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Por defecto al rellenar el formulario vuelve al inicio
+    event.preventDefault(); // Previene el envío del formulario
 
-    const emailInput = document.getElementById('email');
+    const emailInput = document.getElementById('email-newsletter');
     const email = emailInput.value;
-    const message = document.getElementById('message');
+    const message = document.getElementById('newsletter-message');
 
     if (validateEmail(email)) {
         message.textContent = '¡Gracias por suscribirte!';
-        message.classList.remove('hidden');
+        message.style.display = 'block';
         message.style.color = '#0511F2'; // Color del mensaje
         emailInput.value = ''; 
     } else {
         message.textContent = 'Por favor, ingresa un correo electrónico válido.';
-        message.classList.remove('hidden');
-        message.style.color = '#F2F2F2'; // Color del mensaje
+        message.style.display = 'block';
+        message.style.color = '#F22'; // Color del mensaje en rojo
     }
 });
 
@@ -21,3 +21,4 @@ function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
 }
+
