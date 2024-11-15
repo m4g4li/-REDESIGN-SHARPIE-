@@ -520,7 +520,7 @@ label {
     margin-left: 50px;
 }
 
-form {
+.newsletter form {
     display: flex;
     flex-direction: column; /*aparezca primero la casilla de email y luego el botón*/
     margin-left: 50px;
@@ -529,7 +529,7 @@ form {
     z-index: 9;/*controla que elemento se mostrara o actuara antes*/
 }
 
-input[type="email"] { /*estilos que se le agregan al ingresar la dirección de correo*/
+.newsletter input[type="email"] { /*estilos que se le agregan al ingresar la dirección de correo*/
     padding: 10px;
     border: 1px solid #F2F2F2;
     border-radius: 5px;
@@ -539,7 +539,7 @@ input[type="email"] { /*estilos que se le agregan al ingresar la dirección de c
     max-width: 250px;
 }
 
-button {
+.newsletter button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
