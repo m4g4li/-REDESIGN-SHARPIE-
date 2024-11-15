@@ -734,12 +734,16 @@ footer h6{
 
     .box1 {
         flex-basis: 100%; /* Cada caja ocupará el 100% del ancho, moviéndose una debajo de la otra */
+        margin-bottom: 0px;
+        margin-top: 100px;
     }
 
     video{
         margin-top: 0%;
         width: 100%;
     }
+
+    
 
     
     .seccion2{
