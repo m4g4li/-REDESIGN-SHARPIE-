@@ -314,7 +314,7 @@ video{
 
 
 .seccion4{/*sección donde se encuentra la diapositiva infinita*/
-    min-height: 650px;/* altura mínima que sera aplicada a cada sección*/
+    min-height: 450px;/* altura mínima que sera aplicada a cada sección*/
 }
 
 .container4 {
