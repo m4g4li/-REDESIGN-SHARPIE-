@@ -315,6 +315,7 @@ video{
 
 .seccion4{/*sección donde se encuentra la diapositiva infinita*/
     min-height: 450px;/* altura mínima que sera aplicada a cada sección*/
+    margin-top: -80px;
 }
 
 .container4 {
@@ -338,6 +339,7 @@ video{
 
 .seccion5{/*sección donde se encuentra la diapositiva infinita*/
     min-height: 650px;/* altura mínima que sera aplicada a cada sección*/
+    margin-top: -80px;
 }
 
 .container5 {
@@ -370,6 +372,8 @@ video{
 
 .seccion6{/*sección donde se encuentra la diapositiva infinita*/
     min-height: 450px;/* altura mínima que sera aplicada a cada sección*/
+    margin-bottom: 50px;
+    margin-top: -80px;
 }
 
 .container6 {
