@@ -530,7 +530,7 @@ label {
 }
 
 .newsletter input[type="email"] { /*estilos que se le agregan al ingresar la dirección de correo*/
-    padding: 10px;
+    padding: 6px;
     border: 1px solid #F2F2F2;
     border-radius: 5px;
     margin-bottom: 15px;
