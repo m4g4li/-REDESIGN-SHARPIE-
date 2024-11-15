@@ -229,12 +229,35 @@ header .toggle.active{
 .container1 {
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
+    margin-top: 100px;
+}
+
+.title-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    z-index: 10; /* Asegura que quede encima de los demás elementos */
+}
+
+.title-container h1 {
+    font-size: 45px;
+    margin: 0;
+    color: #F20505;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
 }
 
 .box1 {
     flex: 1; /* Hace que ambas cajas ocupen el mismo ancho */
     width: 50%;
     padding: 20px;
+    margin-bottom: 100px;
 }
 
 /*.one, .two{
