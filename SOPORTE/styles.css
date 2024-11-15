@@ -551,11 +551,11 @@ label {
     max-width: 250px;
 }
 
-button:hover {
+.newsletter button:hover {
     background-color: #F20505;
 }
 
-.hidden {
+.newsletter .hidden {
     display: none;
 }
 
