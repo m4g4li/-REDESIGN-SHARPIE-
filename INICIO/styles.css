@@ -297,7 +297,20 @@ video{
     padding: 20px;
 }
 
+.box3 h2 {
+    font-size: 35px;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 
+.box3 p {
+    font-size: 20px;
+    font-family: "Montserrat", serif;
+    line-height: 1.8;
+}
 
 
 .seccion4{/*sección donde se encuentra la diapositiva infinita*/
