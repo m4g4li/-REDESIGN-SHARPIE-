@@ -1,0 +1,822 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+    color: #F272B8;
+    color: #0511F2;
+    color: #F2E205;
+    color: #F20505;
+    color: #F2F2F2;
+    color: #0D0D0D; /*Paleta de color, luego de usarla se puede borrar porque no hace nada */
+}
+
+body{
+    color: #0D0D0D;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F2F2F2;
+    background: url(img/bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+}
+
+.contenedor{
+    margin: auto;
+    width: 90%;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: row;/*Los elementos se ponen al lado menu main y aside*/
+    flex-wrap: wrap;/*Los elementos que no caben se pongan abajo*/
+}
+
+section{
+    position: relative;
+    width: 100%;
+    padding: 0 100px;
+    display: flex;
+}
+
+.inicio{
+    background-image: url(img/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*min-height: 640px; altura mínima que sera aplicada a cada sección*/
+    height: 100vh; /* altura completa de la pantalla */
+}
+
+.inicio video{
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
+
+.inicio.active::before{
+    content: '';
+    box-shadow: 0 0 0 1300px transparent; /* Color fondo de menu */
+}
+
+.inicio.active .menu{
+    opacity: (1);
+    visibility: visible;/*Sea visible el menu*/
+    transition-delay: 0.1s;
+}
+
+
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+}
+/* icono de menu hamburguesa*/
+header .toggle{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-image: url(img/nav.gif);/* decidi hacer un gif que cambia de negro a rojo porque al pasar en algunas secciones no se podia visualizar al ir navegando por la página*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    cursor: pointer;
+}
+/* icono de menu x*/
+header .toggle.active{
+    background-image: url(img/closed.gif);/* decidi hacer un gif que cambia de negro a rojo porque al pasar en algunas secciones no se podia visualizar al ir navegando por la página*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px;
+}
+
+
+
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-direction: column;
+    z-index: 10;
+    padding-left: 500px;
+    opacity: (0);
+    background: url(img/bg.png);/*fondo al menu*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #F2F2F2;
+    visibility:hidden; /*Asi es como logramos que el menu no sea visible hasta presionar menu hamburguesa*/
+}
+
+.menu li a{ /*estilos a los enlaces del menu*/
+    color: #F20505;
+    font-family:"Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    padding: 5px 10px;
+    margin:  5px 0;
+    display: inline-block;
+    transition: 0.1s;/*tiempo paara que desaparezca el menu deplegado*/
+}
+
+.menu li:hover a{
+    letter-spacing: 5px; /*efecto sobre los enlace que se vea con separación cada letra*/
+    color: #F2F2F2;
+}
+
+
+
+
+
+
+.inicio.active .container{
+    transform: scale(0);/*para que desaparezca el contenido y solo este el menu desplegado*/
+}
+
+.inicio.active .video-slide{
+    transform: scale(0);/*para que desaparezca el VIDEO y solo este el menu desplegado*/
+}
+
+
+
+
+.banner1{/*BANNER1*/
+    min-height: 270px;/* altura mínima que sera aplicada a cada sección*/
+    background-image: url(img/banner1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+  
+
+.seccion2{/*sección 2*/
+    /*height: 40vh; /* altura completa de la pantalla */
+    min-height: 200px; /*altura mínima que sera aplicada a cada sección*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion2 .presentacion {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
+    margin-top: 50px;
+}
+  
+.seccion2 .caja {
+    flex: 1; /* Hace que ambas cajas ocupen el mismo ancho */
+    padding: 20px;
+}
+  
+  
+.seccion2 .dos h3{
+    font-family: "Permanent Marker", cursive;
+    font-size: 55px;
+    color: #F272B8;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    padding-left: 2rem;
+}
+  
+.seccion2 .dos p{
+    font-size: 20px;
+    color: #0D0D0D;
+    line-height: 1.8;
+    padding-left: 2rem;
+    font-family:"Montserrat", sans-serif;
+}
+
+
+
+
+.seccion3{/*sección 3*/
+    /* height: 100vh; /* altura completa de la pantalla */
+    min-height: 300px; /*altura mínima que sera aplicada a cada sección*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion3 .presentacion {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
+    margin-top: 0px;
+    height: 300px;
+}
+  
+.seccion3 .caja {
+    flex: 1; /* Hace que ambas cajas ocupen el mismo ancho */
+    padding: 20px;
+}
+  
+.seccion3 .dos p{
+    font-size: 20px;
+    color: #0D0D0D;
+    line-height: 1.8;
+    padding-left: 2rem;
+    font-family:"Montserrat", sans-serif;
+    margin-top: 100px;
+}
+
+
+.seccion4{/*sección 4*/
+    /*height: 40vh; /* altura completa de la pantalla */
+    min-height: 150px; /*altura mínima que sera aplicada a cada sección*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion4 .presentacion {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
+    margin-top: 50px;
+    height: 450px;
+}
+  
+.seccion4 .caja {
+    flex: 1; /* Hace que ambas cajas ocupen el mismo ancho */
+    padding: 20px;
+}
+  
+  
+.seccion4 .dos h3{
+    font-family: "Permanent Marker", cursive;
+    font-size: 55px;
+    color: #F272B8;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    padding-left: 2rem;
+}
+  
+.seccion4 .dos p{
+    font-size: 20px;
+    color: #0D0D0D;
+    line-height: 1.8;
+    padding-left: 2rem;
+    font-family:"Montserrat", sans-serif;
+}
+
+
+.seccion5{/*sección 5*/
+    /* height: 100vh; /* altura completa de la pantalla */
+    min-height: 100px; /*altura mínima que sera aplicada a cada sección*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion5 .presentacion {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
+    margin-top: 0px;
+    height: 400px;
+}
+  
+.seccion5 .caja {
+    flex: 1; /* Hace que ambas cajas ocupen el mismo ancho */
+    padding: 20px;
+}
+
+.seccion5 .dos h3{
+    font-family: "Permanent Marker", cursive;
+    font-size: 30px;
+    color: #F20505;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding-left: 2rem;
+}
+
+.seccion5 .dos p{
+    font-size: 20px;
+    color: #0D0D0D;
+    line-height: 1.8;
+    padding-left: 2rem;
+    font-family:"Montserrat", sans-serif;
+}
+
+
+
+.banner3{/*BANNER2*/
+    min-height: 270px;/* altura mínima que sera aplicada a cada sección*/
+    background-image: url(img/banner3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.seccion6{/*sección 6*/
+    /*height: 40vh; /* altura completa de la pantalla */
+    min-height: 550px; /*altura mínima que sera aplicada a cada sección*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion6 .presentacion {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
+    margin-top: 50px;
+    height: 500px;
+}
+  
+.seccion6 .caja {
+    flex: 1; /* Hace que ambas cajas ocupen el mismo ancho */
+    padding: 20px;
+}
+  
+  
+.seccion6 .dos h3{
+    font-family: "Permanent Marker", cursive;
+    font-size: 55px;
+    color: #F272B8;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    padding-left: 2rem;
+}
+  
+.seccion6 .dos p{
+    font-size: 20px;
+    color: #0D0D0D;
+    line-height: 1.8;
+    padding-left: 2rem;
+    font-family:"Montserrat", sans-serif;
+}
+
+
+
+
+
+
+.seccionb{/*BANNER*/
+    min-height: 210px;/* altura mínima que sera aplicada a cada sección*/
+    background-image: url(img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+.contenedor1{
+    background: url(img/bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/*sección de redes sociales de la marca*/
+.contacto{
+    min-height: 400px;/* altura mínima que sera aplicada a cada sección*/
+    position: relative;
+    width: 100%;
+    height: 0;
+}
+
+
+.newsletter{
+    background-image: url(img/post-it1.png);/*imagen como fondo*/
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    margin-top: 0px ;
+    text-align: center;
+    background-repeat: no-repeat;/*para que no se repita la imagen de fondo*/
+}
+
+.newsletter h2{
+    font-family:"Montserrat", sans-serif;
+    color: #0511F2;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    margin-top: 110px;
+    margin-left: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column; /*aparezca primero la casilla de email y luego el botón*/
+    margin-left: 50px;
+    padding-top: 10px; 
+    position: relative;
+    z-index: 9;/*controla que elemento se mostrara o actuara antes*/
+}
+
+input[type="email"] { /*estilos que se le agregan al ingresar la dirección de correo*/
+    padding: 10px;
+    border: 1px solid #F2F2F2;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-family:"Montserrat", sans-serif;
+    font-size: 16px;
+    max-width: 250px;
+    z-index: 9;
+    
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0D0D0D;
+    font-family:"Montserrat", sans-serif;
+    color: #F2F2F2;
+    font-size: 16px;
+    cursor: pointer;
+    max-width: 250px;
+}
+
+button:hover {
+    background-color: #F20505;
+}
+
+.hidden {
+    display: none;
+}
+
+#message { /*estilos agregados al mensaje que aparecera luego de ingresar el correo */
+    font-family:"Montserrat", sans-serif;
+    margin-top: 80px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+
+.redes{
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    gap: 70px;
+    display: flex;
+    transition: 0.5s;
+    z-index: 9;/*controla que elemento se mostrara o actuara antes*/
+}
+
+.redes li{
+    width: 50px;
+    height: 50px;
+}
+
+.redes li a{
+    display: inline-block;
+    width: 250%;
+    height: 250%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.redes li:hover a{
+    background: #F2E205; 
+}
+
+
+/*.redes li a img{
+    
+
+}*/
+
+
+.redes li a img{
+    transform: scale(0.6);
+}
+
+
+
+
+footer {
+    min-height: 220px;/* altura mínima que sera aplicada a cada sección*/
+    background-image: url(img/contact.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-top: 50px;
+    
+   
+}
+
+footer a img{
+    width: 100px;
+    justify-content: center;
+}
+
+
+footer h6{
+    display: flex;
+    font-family:"Montserrat", sans-serif;
+    color: #0D0D0D;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*agregarle reponsividad a la página*/
+
+@media(max-width:991px){
+    
+    section{
+        padding: 40px;
+    }
+
+    header{
+        padding: 20px 40px;
+    }
+
+    .menu{
+        padding: 0;
+        align-items: center;
+    }
+
+    .menu li a{
+        font-size: 30px;
+    }
+
+    
+    .inicio{
+        min-height: 300px;/* altura mínima que sera aplicada a cada sección*/
+        margin-top: -40px ;
+        background: none;
+        margin-bottom: -265px ;
+    }
+
+    .inicio video{
+        height: 105%;
+    }
+
+
+
+    .seccion2{/*sección 2*/
+        margin-top: 300px;
+        height: 600px;
+    }
+    
+    .seccion2 .caja {
+        flex-basis: 100%; /* Cada caja ocupará el 100% del ancho, moviéndose una debajo de la otra */
+    }
+      
+    .seccion2 .dos h3{
+        margin-top: 0px;
+        font-size: 25px;
+    }
+      
+    .seccion2 .dos p{
+      text-align: left;
+    }
+    
+   
+    .seccion3{/*sección 3*/
+        
+    }
+    
+    .seccion3 .presentacion {
+     height: 600px;
+     margin-top: 150px;
+    }
+      
+    .seccion3 .caja {
+        flex-basis: 100%; /* Cada caja ocupará el 100% del ancho, moviéndose una debajo de la otra */
+    }
+      
+    .seccion3 .dos p{
+        text-align: left;
+        width: 350px;
+    }
+
+
+    .seccion4{/*sección 4*/
+        /*height: 40vh; /* altura completa de la pantalla */
+        min-height: 450px; /*altura mínima que sera aplicada a cada sección*/
+        background: url(img/bg.png);
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    
+    .seccion4 .presentacion {
+        display: flex;
+        flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
+        margin-top: 70px;
+        height: 550px;
+    }
+      
+    .seccion4 .caja {
+        flex-basis: 100%; /* Cada caja ocupará el 100% del ancho, moviéndose una debajo de la otra */
+    }
+      
+      
+    .seccion4 .dos h3{
+        margin-top: 0px;
+        font-size: 25px;
+    }
+      
+    .seccion4 .dos p{
+        text-align: left;
+        width: 350px;
+    }
+    
+
+    .seccion5{/*sección 5*/
+        /* height: 100vh; /* altura completa de la pantalla */
+        min-height: 100px; /*altura mínima que sera aplicada a cada sección*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .seccion5 .presentacion {
+        display: flex;
+        flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
+        margin-top: 150px;
+        height: 300px;
+    }
+      
+    .seccion5 .caja {
+        flex-basis: 100%; /* Cada caja ocupará el 100% del ancho, moviéndose una debajo de la otra */
+    }
+    
+    .seccion5 .dos h3{
+        width: 350px;
+    }
+    
+
+
+    .seccion6{/*sección 2*/
+        background-color: transparent;
+        margin-top: 500px;
+        height: 600px;
+        margin-bottom: 300px;
+    }
+    
+    .seccion6 .caja {
+        flex-basis: 100%; /* Cada caja ocupará el 100% del ancho, moviéndose una debajo de la otra */
+    }
+      
+    .seccion6 .dos h3{
+        margin-top: 0px;
+        font-size: 25px;
+    }
+      
+    .seccion6 .dos p{
+      text-align: left;
+    }
+
+
+    .contacto{
+        min-height: 520px;
+    }
+
+    .newsletter h2{
+        width: 300px;
+        color: #0511F2;
+        font-weight: 600;
+        font-size: 15px;
+        text-align: right;
+    }
+
+    form{
+        z-index: 9;
+    }
+
+    #message {
+        margin-top: 20px;
+    }
+   
+    .redes{
+        padding-top: 350px;
+        margin-right: 0px;
+        gap: 5px;
+    }
+
+    .redes li a img{
+        width: 50px;
+    }
+
+    .redes li a{
+        width: 100%;
+        height: 100%;
+    }
+
+    footer {
+        background-image: url(img/contact2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-left: 40px;
+    }
+
+    footer h6{
+        font-weight: 600;
+        margin-right: 40px;
+    }
+
+
+
+}
+
